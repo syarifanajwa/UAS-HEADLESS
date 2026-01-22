@@ -1,0 +1,39 @@
+{
+    "kind": "collectionType",
+    "collectionName": "menus",
+    "info": {
+        "singularName": "menu",
+        "pluralName": "menus",
+        "displayName": "Menu",
+        "description": "Menu makanan dan minuman restoran Dapoerku"
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "nama": {
+            "type": "string",
+            "required": true
+        },
+        "deskripsi": {
+            "type": "text",
+            "required": true
+        },
+        "harga": {
+            "type": "integer",
+            "required": true,
+            "min": 0
+        },
+        "kategori": {
+            "type": "enumeration",
+            "enum": ["makanan", "minuman", "dessert"],
+            "default": "makanan",
+            "required": true
+        },
+        "tersedia": {
+            "type": "boolean",
+            "default": true
+        }
+    }
+}
